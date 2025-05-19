@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Helvetica-Bold"; /*Can be any text*/
+  src: local("Helvetica-Bold.ttf"),
+    url("./fonts/Helvetica-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Helvetica"; /*Can be any text*/
+  src: local("Helvetica.ttf"), url("./fonts/Helvetica.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Helvetica-Light"; /*Can be any text*/
+  src: local("Helvetica-Light.ttf"),
+    url("./fonts/Helvetica-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Helvetica-Italic"; /*Can be any text*/
+  src: local("Helvetica-Italic.ttf"),
+    url("./fonts/Helvetica-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Helvetica-BoldItalic"; /*Can be any text*/
+  src: local("Helvetica-BoldItalic.ttf"),
+    url("./fonts/Helvetica-BoldItalic.ttf") format("truetype");
+}
+
+body {
+  background-color: #111827;
+
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Mobile-specific styles using media queries */
+@media (max-width: 768px) {
+  body {
+    background-image: url("https://i.postimg.cc/HxkVrhMM/1012681.png");
+  }
+}

@@ -1,0 +1,18 @@
+/* src/styles/WishlistButton.css */
+.wishlist-active {
+  background: #ff4d4d;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.wishlist-inactive {
+  background: #4caf50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

@@ -1,0 +1,402 @@
+/* ========== General Container ========== */
+.naruto-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+}
+
+/* ========== Episode Header ========== */
+.episode-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.episode-header h2 {
+  color: #333;
+  font-size: 24px;
+}
+
+/* ========== Reaction Buttons ========== */
+.reaction-buttonsv3 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.like-btn,
+.dislike-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.like-btn {
+  background-color: #e1f5fe;
+  color: #0288d1;
+}
+
+.like-btn.active {
+  background-color: #0288d1;
+  color: white;
+}
+
+.dislike-btn {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.dislike-btn.active {
+  background-color: #d32f2f;
+  color: white;
+}
+
+/* ========== Comments Section ========== */
+.comments-sectionv3 {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.comments-sectionv3 h3 {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.comments-listv3 {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 10px;
+  margin-bottom: 20px;
+}
+
+.comment-bubble {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reply-bubble {
+  background-color: #f9f9f9;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.replies-container {
+  margin-top: 15px;
+  border-left: 2px solid #eee;
+  padding-left: 15px;
+}
+
+.no-comments {
+  text-align: center;
+  color: #666;
+  padding: 20px;
+}
+
+/* ========== Comment Header & Info ========== */
+.comment-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.profile-pic-container {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.default-profile-pic {
+  font-size: 40px;
+  color: #ccc;
+}
+
+.comment-user-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.comment-username {
+  font-weight: bold;
+  color: #333;
+}
+
+.comment-time {
+  font-size: 12px;
+  color: #888;
+}
+
+/* ========== Comment Text and Actions ========== */
+.comment-text {
+  margin: 10px 0;
+  color: #333;
+}
+
+.replying-to {
+  color: #666;
+  font-size: 12px;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.comment-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.reply-buttonv3 {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.reply-buttonv3:hover {
+  color: #333;
+}
+
+.delete-comment-btn {
+  background: none;
+  border: none;
+  color: #888;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.delete-comment-btn:hover {
+  color: #d32f2f;
+}
+
+/* ========== Input Fields ========== */
+.comment-input-area,
+.reply-input {
+  display: flex;
+  margin-top: 20px;
+}
+
+.comment-input-area input,
+.reply-input input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px 0 0 20px;
+  outline: none;
+}
+
+.send-button,
+.send-reply-buttonv3v3 {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+}
+
+.send-button:hover,
+.send-reply-buttonv3v3:hover {
+  background-color: #45a049;
+}
+
+/* ========== Loading State ========== */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  font-size: 24px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========== Update Notification ========== */
+.update-notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1000;
+}
+
+/* ========== User Modal ========== */
+.user-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.user-modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Banner background */
+.user-bannerv3 {
+  height: 120px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Close Button */
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #666;
+}
+
+/* Profile Header (Overlapping Banner) */
+.user-modal-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -40px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.profile-pic-wrapperv3 {
+  position: relative;
+  z-index: 2;
+  border: 4px solid white;
+  border-radius: 50%;
+  background-color: white;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+}
+
+.modal-profile-picv3 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.modal-default-pic {
+  font-size: 80px;
+  color: #ccc;
+}
+
+.modal-username {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* User Info */
+.user-detailsv3 {
+  margin-bottom: 20px;
+}
+
+.user-detailsv3 p {
+  margin: 10px 0;
+}
+
+/* Delete Button */
+.delete-comments-btn2 {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.delete-comments-btn2:hover {
+  background-color: #d32f2f;
+}
+
+/* Add these styles to ensure proper display */
+.naruto-container {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.naruto-container.loading {
+  opacity: 0.5;
+}
+
+.loading-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-prompt {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.login-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #4285f4;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+}
