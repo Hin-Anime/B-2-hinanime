@@ -1,6 +1,15 @@
 // tailwind.config.js
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./public/index.html",
+    "./src/**/*.css", // Add this line
+    "./src/components/**/*.{js,jsx}", // Add component paths
+    "./src/pages/**/*.{js,jsx}", // Add page paths
+  ],
+  safelist: [
+    { pattern: /./ }, // TEMPORARY - allows all classes for testing
+  ],
   theme: {
     extend: {
       height: {
